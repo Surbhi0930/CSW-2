@@ -1,0 +1,42 @@
+
+
+//Code for build tree,it will return the value of root
+
+class Node{ //Node class
+	int data;
+	Node left;
+	Node right;
+
+Node(int data){
+	this.data=data;
+	this.left=null;
+	this.right=null;
+}
+}
+class BinaryTree{   //Binary tree class
+	static int idx= -1;
+	public static Node buildTree(int nodes[] ) { //it will build a tree and return the root node 
+		//and we take the parameter array of nodes formed in main class.
+		idx++; //first we take the value of idx -1 and then inside the funcn we update it so it will check is as 0
+		if(nodes[idx]== -1) {
+			return null;
+		}
+		//if not null then we have to create a new node
+		Node newNode=new Node(nodes[idx]);//in parameter we initialize the nodes
+		newNode.left=buildTree(nodes);//after root node we create left subtree and equalto is used here as addition so it adds the node with left subtree and right subtree
+		newNode.right=buildTree(nodes);//then right subtree
+		return newNode; //we call buildtree function it recursively used here to check the index and node
+	}
+}
+public class BuildTree {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int nodes[]= {1,2,4,5,3,6};
+BinaryTree tree=new BinaryTree();
+Node root=tree.buildTree(nodes);
+System.out.println(root.data);
+
+	}
+
+}
