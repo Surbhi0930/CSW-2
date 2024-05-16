@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.Iterator;
 import java.util.Map;
@@ -15,7 +14,6 @@ class Address {
         this.post = post;
     }
 
-    // Getter and Setter methods
     public String getPlotNo() {
         return plotNo;
     }
@@ -48,15 +46,12 @@ class Address {
 
 public class TreeMapAddress {
     public static void main(String[] args) {
-        // Create a TreeMap with keys as names of persons and values as addresses
         TreeMap<String, Address> addressMap = new TreeMap<>();
 
-        // Insert required key-value pairs
         addressMap.put("John", new Address("A-101", "Main Street", "City1"));
         addressMap.put("Alice", new Address("B-202", "Park Avenue", "City2"));
         addressMap.put("Bob", new Address("C-303", "Downtown", "City3"));
 
-        // Use an iterator to display the TreeMap
         Iterator<Map.Entry<String, Address>> iterator = addressMap.entrySet().iterator();
         System.out.println("TreeMap contents:");
         while (iterator.hasNext()) {
