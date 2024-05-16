@@ -1,22 +1,15 @@
-//Write a program to create a Student class that has members, name, roll
-//        number, and age. Design the Student class in such a way that it can take
-//        the roll number as an integer or string. Create a driver class that creates
-//        student objects and invokes the methods.
-package sem_4_Assignments.Assignment_2;
 
 class Student<T> {
     private String name;
-    private T rollNumber; // Roll number can be either an integer or a string
+    private T rollNumber; 
     private int age;
 
-    // Constructor
     public Student(String name, T rollNumber, int age) {
         this.name = name;
         this.rollNumber = rollNumber;
         this.age = age;
     }
 
-    // Getters and setters
     public String getName() {
         return name;
     }
@@ -41,7 +34,6 @@ class Student<T> {
         this.age = age;
     }
 
-    // Method to display student details
     public void displayDetails() {
         System.out.println("Name: " + name);
         System.out.println("Roll Number: " + rollNumber);
@@ -51,11 +43,9 @@ class Student<T> {
 
 public class StudentDriver {
     public static void main(String[] args) {
-        // Creating student objects with different roll number types
         Student<String> student1 = new Student<>("Alice", "S123", 20);
         Student<Integer> student2 = new Student<>("Bob", 456, 21);
 
-        // Displaying student details
         System.out.println("Student 1 Details:");
         student1.displayDetails();
         System.out.println();
