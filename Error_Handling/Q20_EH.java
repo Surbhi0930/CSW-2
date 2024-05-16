@@ -1,5 +1,4 @@
-package CSW_4th_Sem.Error_Handling;
-//Question same as Question no. 18
+
 public class Q20_EH {
     public static void arrTraveralRec(int [] arr,int idx,int n){
         if(idx==n+1)
