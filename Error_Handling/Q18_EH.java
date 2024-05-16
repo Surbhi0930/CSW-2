@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 public class Q18_EH {
     public static void arrTraveralRec(int [] arr,int idx,int n){
