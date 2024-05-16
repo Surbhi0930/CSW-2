@@ -1,27 +1,24 @@
-//Anagram Checker: Write a program that checks if two strings are anagrams (can be
-//rearranged to form the same string). Use methods like toLowerCase, toCharArray, and
-//sorting algorithms to compare character frequencies
-import java.util.*;
-public class q7 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str1 = sc.next();
-        String str2 = sc.next();
 
-        str1 = str1.toLowerCase();
-        str2 = str2.toLowerCase();
+import java.util.Scanner;
 
-        char[] ch1 = str1.toCharArray();
-        char[] ch2 = str2.toCharArray();
-        Arrays.sort(ch1);
-        Arrays.sort(ch2);
-        if(Arrays.equals(ch1, ch2)){
-            System.out.println("Anagram");
-        }
-        else{
-            System.out.println("Not Anagram");
-        }
+public class q8 {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner obj = new Scanner(System.in);
+        System.out.println("Enter 1st String:");
+        String a = obj.nextLine();
+        String d=a;
+        System.out.println("Enter 2nd String:");
+        String b = obj.nextLine();
+        a=a.concat(b);
+        System.out.println("After using String Method the String is: "+a);
+        System.out.println("After using using '+' operator the String is: "+(d+b));
+        System.out.println("Enter any index to see the Character:");
+        int index=obj.nextInt();
+        char result=a.charAt(index);
+        System.out.println("The Character found: "+result);
 
-    }
+	}
+
 }
