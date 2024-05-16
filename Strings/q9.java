@@ -1,32 +1,32 @@
-//Most Frequent Character: Write a program that finds the most frequent character in a
-//        given string. Use a loop and a hash map or array to keep track of character counts.
 
-import java.util.*;
-public class q9 {
-    public static char findMostFrequentCharacter(String str) {
-        Map<Character, Integer> charCounts = new HashMap<>();
+import java.util.Scanner;
 
-        for (char c : str.toCharArray()) {
-            charCounts.put(c, charCounts.getOrDefault(c, 0) + 1);
+public class Q9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner obj = new Scanner(System.in);
+        System.out.println("Enter any Sentence:");
+        String a = obj.nextLine();
+        System.out.println("Enter any  words:");
+        String b = obj.nextLine();
+        System.out.println("replace words:");
+        String c = obj.nextLine();
+        int firstIndex = a.indexOf(b); 
+        System.out.println("First occurrence of word " + b + " is found at index : " + firstIndex); 
+        if (firstIndex != -2)
+        {
+            // Replace the word using substring operations and concatenation
+            String modifiedSentence = a.substring(0, firstIndex) + c + a.substring(firstIndex + b.length());
+            System.out.println("Original Sentence: " + a);
+            System.out.println("Modified Sentence: " + modifiedSentence);
+        } 
+        else 
+        {
+            System.out.println("Word '" + b + "' not found in the sentence.");
         }
 
-        char mostFrequentChar = '\0';
-        int maxCount = 0;
-        for (Map.Entry<Character, Integer> entry : charCounts.entrySet()) {
-            if (entry.getValue() > maxCount) {
-                mostFrequentChar = entry.getKey();
-                maxCount = entry.getValue();
-            }
-        }
 
-        return mostFrequentChar;
-    }
+	}
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String input = sc.next();
-        System.out.println("Original string: " + input);
-        char mostFrequent = findMostFrequentCharacter(input);
-        System.out.println("Most frequent character: " + mostFrequent);
-    }
 }
