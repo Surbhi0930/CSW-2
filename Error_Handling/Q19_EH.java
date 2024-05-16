@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 public class Q19_EH {
     public static void bubbleSort(int [] arr,int n){
