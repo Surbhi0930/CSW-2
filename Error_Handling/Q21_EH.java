@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 public class Q21_EH {
     public static int add(int [][] mat){
