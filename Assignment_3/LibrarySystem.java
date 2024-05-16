@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.HashMap;
 
@@ -87,26 +86,20 @@ public class LibrarySystem {
     public static void main(String[] args) {
         Library library = new Library();
 
-        // Instantiate at least two Book objects
         Book book1 = new Book(1, "Java Programming", "John Doe", 10);
         Book book2 = new Book(2, "Data Structures and Algorithms", "Jane Smith", 15);
 
-        // Add books to the library
         library.addBook(101, book1);
         library.addBook(102, book2);
 
-        // Display the collection of books in the library
         library.displayBooks();
 
-        // (a.) Check if a particular book name is present in the map
         String searchBook = "Java Programming";
         System.out.println("Is book \"" + searchBook + "\" present in the library? " + library.containsBook(searchBook));
 
-        // (b.) Remove the value associated with a particular key value
         int keyToRemove = 101;
         library.removeBook(keyToRemove);
 
-        // Display the updated collection of books in the library
         library.displayBooks();
     }
 }
