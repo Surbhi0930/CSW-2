@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 public class Q11_EH {
     public static void main(String[] args) {
