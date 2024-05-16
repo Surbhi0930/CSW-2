@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 class CustomNullPointerException extends NullPointerException{
     CustomNullPointerException(String s){
