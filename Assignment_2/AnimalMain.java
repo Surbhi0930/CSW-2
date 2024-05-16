@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_2;
 
 class Animal {
     private String name;
@@ -11,7 +10,8 @@ class Animal {
         this.type = type;
     }
 
-    // Override hashCode method to print unique ID for each object
+
+    
     @Override
     public int hashCode() {
         return System.identityHashCode(this);
@@ -44,12 +44,10 @@ class Animal {
 
 public class AnimalMain {
     public static void main(String[] args) {
-        // Creating objects of the Animal class
         Animal animal1 = new Animal("Dog", "Brown", "Pet");
         Animal animal2 = new Animal("Tiger", "Orange", "Wild");
         Animal animal3 = new Animal("Cat", "White", "Pet");
 
-        // Printing hash codes of the objects
         System.out.println("Hash Code of Animal 1: " + animal1.hashCode());
         System.out.println("Hash Code of Animal 2: " + animal2.hashCode());
         System.out.println("Hash Code of Animal 3: " + animal3.hashCode());
