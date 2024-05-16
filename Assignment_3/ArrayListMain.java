@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +12,6 @@ class User {
         this.age = age;
     }
 
-    // Getter and Setter methods
     public String getName() {
         return name;
     }
@@ -58,18 +56,14 @@ public class ArrayListMain {
     public static void main(String[] args) {
         ArrayListUser arrayListUser = new ArrayListUser();
 
-        // Adding users
         arrayListUser.addUser(new User("Alice", 25));
         arrayListUser.addUser(new User("Bob", 30));
         arrayListUser.addUser(new User("Charlie", 20));
 
-        // Printing users
         arrayListUser.printUsers();
 
-        // Sorting users by age
         arrayListUser.sortUsersByAge();
 
-        // Printing sorted users
         System.out.println("\nSorted List of Users by Age:");
         arrayListUser.printUsers();
     }
