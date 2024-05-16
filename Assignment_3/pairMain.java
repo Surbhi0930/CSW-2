@@ -1,8 +1,3 @@
-//Create a generic class Pair<K,V> with private variables key and value.
-//The class Pair should define a parameterised constructor and getter and
-//        setter methods for these attributes. After addition of objects, the main
-//class should retrieve and print the pair of key and value.
-package sem_4_Assignments.Assignment_3;
 
 public class pairMain {
     public static void main(String[] args) {
