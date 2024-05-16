@@ -1,14 +1,14 @@
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 
 interface EnrollmentSystem {
     void enrollStudent(Student student, Course course);
     void dropStudent(Student student, Course course);
     void displayEnrollmentDetails();
 }
+
+
 
 class Student {
     private String studentId;
@@ -27,6 +27,9 @@ class Student {
         return name;
     }
 }
+
+
+
 
 class Course {
     private String courseId;
@@ -77,12 +80,14 @@ class Enrollment implements EnrollmentSystem {
         enrollments = new HashMap<>();
     }
 
+    
     @Override
     public void enrollStudent(Student student, Course course) {
         if (!enrollments.containsKey(course)) {
             enrollments.put(course, new ArrayList<>());
         }
-        List<Student> students = enrollments.get(course);
+
+ List<Student> students = enrollments.get(course);
         if (course.enrollStudent(student)) {
             students.add(student);
             System.out.println(student.getName() + " enrolled in " + course.getName());
@@ -93,9 +98,9 @@ class Enrollment implements EnrollmentSystem {
 
     @Override
     public void dropStudent(Student student, Course course) {
-        if (enrollments.containsKey(course)) {
-            List<Student> students = enrollments.get(course);
-            if (students.contains(student)) {
+         if (enrollments.containsKey(course)) {
+             List<Student> students = enrollments.get(course);
+             if (students.contains(student)) {
                 course.dropStudent(student);
                 students.remove(student);
                 System.out.println(student.getName() + " dropped from " + course.getName());
