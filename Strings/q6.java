@@ -1,23 +1,36 @@
-//Duplicate Character Remover: Write a program that removes all duplicate characters
-//from a given string. Use a loop with conditional statements and potentially toCharArray
-//to achieve this.
 
-import java.util.*;
-public class q6 {
+import java.util.Scanner;
+
+public class que6 {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str1 = sc.nextLine();
-        str1 = str1.toLowerCase();
-        StringBuilder str2 = new StringBuilder();
+        Scanner obj = new Scanner(System.in);
+        System.out.println("Enter 1st String:");
+        String a = obj.nextLine();
+        System.out.println("Enter 2nd String:");
+        String b = obj.nextLine();
+        String c = a.toUpperCase();
+        String d = a.toLowerCase();
+        System.out.println(a + " in Lower Case: " + d);
+        System.out.println(a + " in Upper Case: " + c);
+        String e = b.toUpperCase();
+        String f = b.toLowerCase();
+        System.out.println(b + " in Lower Case: " + f);
+        System.out.println(b + " in Upper Case: " + e);
 
-        Set<Character> uniqueChars = new HashSet<>();
-        for (int i = 0; i <str1.length() ; i++) {
-            char ch = str1.charAt(i);
-            if (!uniqueChars.contains(ch)) {
-                uniqueChars.add(ch);
-                str2.append(ch);
-            }
+        // Comparing strings
+        if (c.equals(d)) {
+            System.out.println("Both the Strings are Equal.");
+        } else {
+            System.out.println("The Strings are Not Equal.");
         }
-        System.out.println(str2.toString());
+
+        if (e.equals(f)) {
+            System.out.println("Both the Strings are Equal .");
+        } else {
+            System.out.println("The Strings are Not Equal after case conversion.");
+        }
+
+        obj.close();
     }
 }
