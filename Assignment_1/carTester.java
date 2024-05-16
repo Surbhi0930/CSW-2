@@ -1,44 +1,37 @@
-// Q1. Write a Java code snippet that comprises a Car class and a CarTester class. The Car class
-// should define private fields for make and model, along with a parameterized constructor and
-// getter/setter methods for these attributes. In the CarTester class, instantiate two instances of
-// the Car class: myCar1 with a specified make and model, and myCar2 with null values. After
-// instantiation, the CarTester class should retrieve and print the initial make and model of both
-// cars. Then, it should set new values for myCar2 using setter methods and print the updated
-// make and model.
-package sem_4_Assignments.assignment_1;
+public class q1 {
 
-/**
- * carTester
- */
-public class carTester {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Car c1=new Car("Audi","#6f");
+Car c2=new Car("null","null");
+ c2.setmake("benz");
+ c2.setmodel("q7");
+System.out.println(c1.getMake()+" " +c1.getModel());
+System.out.println(c2.getMake()+" " +c2.getModel());
 
-    public static void main(String[] args) {
-        car myCar1 = new car("audi", "A3");
-        car myCar2 = new car(null, null);
-        myCar2.setMake("benz");
-        myCar2.setModel("q7");
-        System.out.println(myCar1.getMake()+" "+myCar1.getModel());
-        System.out.println(myCar2.getMake()+" "+myCar2.getModel());
-    }
+
+	}
+
 }
-class car{
+class Car{
+	private String make;
+	private String model;
+	Car(String make,String model){
+		this.make=make;
+		this.model=model;
+	}
+		public String getMake() {
+			return this.make;
+		}
+		public void setmake(String make) {
+			this.make=make;
+		
+	}
+		public String getModel() {
+			return this.model;
+		}
+		public void setmodel(String model) {
+			this.model=model;	
+	}
 
-    private String make;
-    private String model;
-    car(String make,String model){
-        this.make = make;
-        this.model = model;
-    }
-    void setMake(String make){
-        this.make = make;
-    }
-    String getMake(){
-        return make;
-    }
-    void setModel(String model){
-        this.model = model;
-    }
-    String getModel(){
-        return model;
-    }
 }
