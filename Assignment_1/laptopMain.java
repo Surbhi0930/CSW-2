@@ -1,46 +1,37 @@
-//Write a Java code snippet comprising two classes: Laptop and Main. The Laptop class
-//defines private fields model and price, alongside setter methods for each attribute.
-//Additionally, it overrides the toString() method to return a string representation of the laptop's
-//model and price. In the Main class, create an instance of Laptop, setting its model using the
-//setter method. Then, print the laptop object using the toString() method. Describe the
-//functionality of the toString() method in the Laptop class and explain how it is utilized in the
-//        Main class.
-package sem_4_Assignments.assignment_1;
+public class q4 {
 
-public class laptopMain {
-    public static void main(String[] args) {
-        laptop l = new laptop(null,0);
-        l.setModel("HP");
-        l.setPrice(100000);
-        System.out.println(l.getModel()+" "+l.getPrice());
-        System.out.println(l);
-    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Laptop L=new Laptop(null,0);
+L.setmodel("ASUS");
+L.setprice(100000);
+System.out.println(L.getmodel()+ " "+ L.getprice());
+System.out.println(L);
+	}
+
 }
-class laptop{
-    private String model;
-    private double price;
-    laptop(String model,double price){
-        this.model = model;
-        this.price = price;
-    }
+class Laptop{
+	private String model;
+	private double price;
+	Laptop(String model,double price){
+		this.price=price;
+		this.model=model;
+	}
+	public String getmodel() {
+		return this.model;
+	}
+	public void setmodel(String model) {
+		this.model=model;
+	}
+	public double getprice() {
+		return this.price;
+	}
+	public void setprice(double price) {
+		this.price=price;
+	}
+	@Override
+	public String toString() {
+		return price + " "+ model;
+	}
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-    public String toString(){
-
-        return price +" "+ model;
-    }
 }
