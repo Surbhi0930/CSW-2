@@ -1,14 +1,13 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.HashSet;
 
 public class RepeatingIntegers {
-    public static void printRepeatingIntegers(int[] nums) {
-        HashSet<Integer> seen = new HashSet<>();
-        HashSet<Integer> repeating = new HashSet<>();
+      public static void printRepeatingIntegers(int[] nums) {
+           HashSet<Integer> seen = new HashSet<>();
+           HashSet<Integer> repeating = new HashSet<>();
 
         for (int num : nums) {
-            if (!seen.add(num)) { // If the number is already present in the set, it's a repeating integer
+            if (!seen.add(num)) { 
                 repeating.add(num);
             }
         }
