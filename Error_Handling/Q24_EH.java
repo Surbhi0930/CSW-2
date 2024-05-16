@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
