@@ -1,18 +1,15 @@
-package sem_4_Assignments.assignment_1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-// Interface class for loose coupling
+
 interface EnrollmentSystem {
     void enrollStudent(Student student, Course course);
     void dropStudent(Student student, Course course);
     void displayEnrollmentDetails();
 }
 
-// Student class
 class Student {
     private String studentId;
     private String name;
@@ -31,7 +28,6 @@ class Student {
     }
 }
 
-// Course class
 class Course {
     private String courseId;
     private String name;
@@ -74,7 +70,6 @@ class Course {
     }
 }
 
-// Enrollment class
 class Enrollment implements EnrollmentSystem {
     private Map<Course, List<Student>> enrollments;
 
@@ -125,7 +120,6 @@ class Enrollment implements EnrollmentSystem {
     }
 }
 
-// Main class
 public class StudentMain {
     public static void main(String[] args) {
         Student student1 = new Student("1001", "Alice");
