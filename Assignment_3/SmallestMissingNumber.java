@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.HashMap;
 
@@ -6,19 +5,16 @@ public class SmallestMissingNumber {
     public static int findSmallestMissingNumber(int[] nums) {
         HashMap<Integer, Integer> elementMap = new HashMap<>();
 
-        // Populate the HashMap with elements from the array
         for (int num : nums) {
             elementMap.put(num, 1);
         }
 
-        // Iterate from 1 to 10 to find the smallest missing positive number
         for (int i = 1; i <= 10; i++) {
             if (!elementMap.containsKey(i)) {
                 return i;
             }
         }
 
-        // If all numbers from 1 to 10 are present in the array, return 11
         return 11;
     }
 
