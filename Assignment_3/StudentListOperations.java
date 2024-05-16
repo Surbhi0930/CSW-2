@@ -1,4 +1,3 @@
-package sem_4_Assignments.Assignment_3;
 
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -14,7 +13,6 @@ class Student {
         this.mark = mark;
     }
 
-    // Getter and Setter methods
     public String getName() {
         return name;
     }
@@ -39,7 +37,6 @@ class Student {
         this.mark = mark;
     }
 
-    // Override equals method
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -57,25 +54,19 @@ public class StudentListOperations {
     public static void main(String[] args) {
         LinkedList<Student> studentList = new LinkedList<>();
 
-        // Add some student objects
         studentList.add(new Student("Alice", 20, 85.5));
         studentList.add(new Student("Bob", 21, 90.0));
         studentList.add(new Student("Charlie", 22, 75.0));
 
-        // (a) Display the list
         displayList(studentList);
 
-        // (b) Search for a student object
         searchStudent(studentList);
 
-        // (c) Remove a specified student object
         removeStudent(studentList);
 
-        // (d) Count the number of objects present in the list
         int count = studentList.size();
         System.out.println("Number of student objects present in the list: " + count);
 
-        // (e) Override equals method checking if two student objects are the same
         Student s1 = new Student("Alice", 20, 85.5);
         Student s2 = new Student("Alice", 20, 85.5);
         System.out.println("Are s1 and s2 equal? " + s1.equals(s2));
