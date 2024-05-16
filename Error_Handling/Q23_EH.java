@@ -1,4 +1,3 @@
-package CSW_4th_Sem.Error_Handling;
 import java.io.*;
 public class Q23_EH {
     public static void main(String[] args) {
